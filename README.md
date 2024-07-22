@@ -27,7 +27,7 @@ In order to build a Flatpak for the dev version of Path of Building you will nee
       - type: git
         url: https://github.com/PathOfBuildingCommunity/PathOfBuilding.git
         commit: f101dde1f11b77fb76e99b4851cb6cfa8966e5f2
-    ```
+  ```
 
 4. Build the Flatpak locally and install
   ```bash
