@@ -23,7 +23,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/PathOfBuildingCommunity/PathOfBuilding.git
-        commit: beab7deac937e2610bdae19f49ee1d0c84d33ef8
+        commit: f101dde1f11b77fb76e99b4851cb6cfa8966e5f2
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
