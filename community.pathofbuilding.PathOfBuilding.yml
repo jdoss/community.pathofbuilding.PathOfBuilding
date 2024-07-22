@@ -23,12 +23,11 @@ modules:
     sources:
       - type: git
         url: https://github.com/PathOfBuildingCommunity/PathOfBuilding.git
-        commit: de99984a644a64a8cbfe5d16f27d6adfec73a142
+        commit: beab7deac937e2610bdae19f49ee1d0c84d33ef8
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
           is-main-source: true
-        tag: v2.42.0
       - type: patch
         path: PathOfBuilding-force-disable-devmode.patch
 
@@ -44,11 +43,11 @@ modules:
   - name: dkjson
     buildsystem: simple
     build-commands:
-      - install -Dm644 dkjson.lua ${FLATPAK_DEST}/pathofbuilding
+      - install -Dm644 dkjson-2.8.lua ${FLATPAK_DEST}/pathofbuilding/dkjson.lua
     sources:
       - type: file
-        url: http://dkolf.de/src/dkjson-lua.fsl/raw/dkjson.lua?name=6c6486a4a589ed9ae70654a2821e956650299228
-        sha256: bdb71dbe2863e9567d5a9a926faed1cfc4c12e04741a3e9009d334df25b9748c
+        url: http://dkolf.de/dkjson-lua/dkjson-2.8.lua
+        sha256: eb3bf160688fb395a2db6bc52eeff4f7855a6321d2b41bdc754554d13f4e7d44
 
   - name: Lua-cURLv3
     buildsystem: simple
