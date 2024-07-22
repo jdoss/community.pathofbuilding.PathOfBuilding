@@ -6,11 +6,13 @@ In order to build a Flatpak for the dev version of Path of Building you will nee
   ```bash
   flatpak install org.kde.Sdk/x86_64/6.6
   ```
+
 2. Get the sha of the current dev branch
   ```bash
   curl -sL https://api.github.com/repos/PathOfBuildingCommunity/PathOfBuilding/git/trees/dev|jq -r .sha
   f101dde1f11b77fb76e99b4851cb6cfa8966e5f2
   ```
+
 3. Edit `community.pathofbuilding.PathOfBuilding.yml` and update the `commit` for the
   ```yaml
   modules:
@@ -26,8 +28,10 @@ In order to build a Flatpak for the dev version of Path of Building you will nee
         url: https://github.com/PathOfBuildingCommunity/PathOfBuilding.git
         commit: f101dde1f11b77fb76e99b4851cb6cfa8966e5f2
     ```
+
 4. Build the Flatpak locally and install
   ```bash
   flatpak-builder flatpak-build --user --force-clean --install community.pathofbuilding.PathOfBuilding.yml
   ```
+
 5. Spend the rest of your day theory crafting a Path of Exile league start
