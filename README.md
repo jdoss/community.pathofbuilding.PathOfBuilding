@@ -2,6 +2,8 @@
 
 In order to build a Flatpak for the dev version of Path of Building you will need to clone this repo and do the following:
 
+## Manual
+
 1. Install the KDE SDK Flatpak
   ```bash
   flatpak install org.kde.Sdk/x86_64/6.6
@@ -35,3 +37,13 @@ In order to build a Flatpak for the dev version of Path of Building you will nee
   ```
 
 5. Spend the rest of your day theory crafting a Path of Exile league start
+
+## Automated
+
+You can also just run `./build.sh` which will build off of the current SHA on the dev branch of `PathOfBuildingCommunity/PathOfBuilding` on GitHub. You can also pass the SHA you want to build:
+
+```bash
+./build.sh 2b7a951643dfc27c4ad2a9d71f7234c1edd883e3
+```
+
+Note: You will need to have https://github.com/mikefarah/yq installed for this script to work.
